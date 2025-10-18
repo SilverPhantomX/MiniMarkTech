@@ -97,10 +97,41 @@ Este sistema va dirigido principalmente a 2 tipos de usuarios:
 - Si los productos del negocio son más de lo que se tiene previsto el sistema puede ralentizarse.
 - En caso de intentar usar el sistema en otro sistema operativo que no sea Windows no podrá ejecutarse.
 
+*1 nose*
 
-*2.6 Requisitos Futuros*
+*2 nose*
+
+*3 Funciones necesarias*
+
+*4 Datos a guardar*
+
+*5 Reglas de negocio*
+
+*6 Proridades*
+
+*7 Flujos Principales*
+
+*8 Requerimientos no funcionales*
+
+*9 Plazo deseado*
+
+*10 Definicion de alcance y presupuesto*
+
+*11 Propuesta formal*
+
+*12 Criterios de aceptacion*
+
+*13 Soporte y mantemiento*
+
+
+
+*14 Requisitos Futuros*
 
 Como principal requisito aumentar la capacidad del sistema para gestionar mayor cantidad productos y perfiles permitiendo escalar proporcionalmente junto al negocio.
+
+
+
+
 
 
 ||||
