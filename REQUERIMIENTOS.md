@@ -85,11 +85,17 @@ Este sistema va dirigido principalmente a 2 tipos de usuarios:
 - Administradores: Manejo básico-intermedio de un sistema de inventario. Tienen acceso al control de stock de los productos, gestión del inventario; añadir, modificar o eliminar perfiles de trabajadores.
 - Trabajadores: Conocimientos básicos, necesitan una interfaz simple para evitar confusiones al usar el sistema. Pueden gestionar el inventario.
 
-*2.4 Restricciones*
+*2.4 *Prioridades*
 
-- Limitaciones del hardware: Necesita como sistema operativo Windows 10 o superior. 
-- Funciones de control: Administradores tendrán control sobre los perfiles de los usuarios incluyendo las funciones de los trabajadores. Los trabajadores podrán realizar controles de stock y gestión de inventario.
-- Consideración acerca de la seguridad: Se implementan mecanismos de autenticación y control de acceso para asegurar que solo el personal autorizado pueda acceder a los datos sensibles del inventario.
+Prioridad alta: 
+- Realizar gestión del inventario (añadir, modificar, eliminar productos).
+- Gestionar precios de los productos.
+
+Prioridad media:
+- Gestionar controles de acceso según el rol del usuario (administrador o trabajador).
+
+Prioridad baja:
+- Sistema de notificaciones (alertar al usuario cuando queden pocas unidades de un producto).
 
 *2.5 Suposiciones*
 
