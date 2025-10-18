@@ -103,35 +103,54 @@ Prioridad baja:
 - Si los productos del negocio son más de lo que se tiene previsto el sistema puede ralentizarse.
 - En caso de intentar usar el sistema en otro sistema operativo que no sea Windows no podrá ejecutarse.
 
-*1 nose*
+*1. Proble del negocio*
 
-*2 nose*
+*2. Usuarios*
 
-*3 Funciones necesarias*
+*3. Funciones necesarias*
 
-*4 Datos a guardar*
+*4. Datos a guardar*
 
-*5 Reglas de negocio*
+Estos datos sera la informacion principal de cada tabla que debomos formar estos seran los datos sobre;
+- Productos: nombre, descripccion, codigo de barras, precio unitario, proveedores y Stock.
+- Proveedores: Nombre, contacto, direccion.
+- Usuraios: Nombres, contraseñas, rol,
+contacto.
+- Configuracion del local: Nombre del local, direccion, horario atencion.
+- registro de movientos: metodos de pago, moneda, cantidad, producto.
 
-*6 Proridades*
+*5. Reglas de negocio*
 
-*7 Flujos Principales*
+*6. Proridades*
 
-*8 Requerimientos no funcionales*
+Prioridad alta: 
+- Realizar gestión del inventario (añadir, modificar, eliminar productos).
+- Gestionar precios de los productos.
 
-*9 Plazo deseado*
+Prioridad media:
+- Gestionar controles de acceso según el rol del usuario (administrador o trabajador).
 
-*10 Definicion de alcance y presupuesto*
-
-*11 Propuesta formal*
-
-*12 Criterios de aceptacion*
-
-*13 Soporte y mantemiento*
+Prioridad baja:
+- Sistema de notificaciones (alertar al usuario cuando queden pocas unidades de un producto).
 
 
+*7. Flujos Principales*
 
-*14 Requisitos Futuros*
+*8. Requerimientos no funcionales*
+
+*9. Plazo deseado*
+
+*10. Definicion de alcance y presupuesto*
+
+*11. Propuesta formal*
+
+*12. Criterios de aceptacion*
+
+*13. Soporte y mantemiento*
+
+
+
+*14. Requisitos Futuros*
 
 Como principal requisito aumentar la capacidad del sistema para gestionar mayor cantidad productos y perfiles permitiendo escalar proporcionalmente junto al negocio.
 
