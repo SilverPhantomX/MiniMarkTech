@@ -109,7 +109,25 @@ Este sistema va dirigido principalmente a 2 tipos de usuarios:
 
 *6 Proridades*
 
-*7 Flujos Principales*
+### *7 Flujos Principales*
+
+#### - Flujo de registro y control de inventario
+    1. Se hace una lista de productos que pueden tener diferencias con el inventario 
+    2. Se buscan los productos y se anota cuantos quedan
+    3. El encargado inicia sesion en el sistema
+    4. Actualiza el inventario con el stock correcto
+
+#### - Flujo de compras (entrada)
+    1. El encargado revisa los productos con bajos stock y revisa si existen alertas de bajo stock
+    2. El encargado hace el pedido de los productos que sean necesarios 
+    3. Al recibir la mercadería el encargado revisa si existen mermas o productos faltantes
+    4. Los productos se ingresan al sistema mediante el SKU
+
+#### - Flujo de venta (salida)
+    1. El encargado de venta accede al sistema
+    2. Escanea los productos que salen de la tienda
+    3. El sistema descuenta los productos del stock cuando se hace la venta 
+    
 
 *8 Requerimientos no funcionales*
 
