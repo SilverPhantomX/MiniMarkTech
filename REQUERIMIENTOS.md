@@ -103,12 +103,12 @@ Prioridad baja:
 - Si los productos del negocio son más de lo que se tiene previsto el sistema puede ralentizarse.
 - En caso de intentar usar el sistema en otro sistema operativo que no sea Windows no podrá ejecutarse.
 
-*1. Proble del negocio*
+*1. Problema del negocio*
 
 *2. Usuarios*
 
 *3. Funciones necesarias*
-
+ 
 *4. Datos a guardar*
 
 Estos datos sera la informacion principal de cada tabla que debomos formar estos seran los datos sobre;
@@ -117,7 +117,7 @@ Estos datos sera la informacion principal de cada tabla que debomos formar estos
 - Usuraios: Nombres, contraseñas, rol,
 contacto.
 - Configuracion del local: Nombre del local, direccion, horario atencion.
-- registro de movientos: metodos de pago, moneda, cantidad, producto.
+- registro de movimientos: metodos de pago, moneda, cantidad, producto.
 
 *5. Reglas de negocio*
 
@@ -160,13 +160,35 @@ Prioridad baja:
 
 *10. Definicion de alcance y presupuesto*
 
-*11. Propuesta formal*
+*11. Propuesta formal y cronograma de trabajo*
 
-*12. Criterios de aceptacion*
+*12. Criterios de aceptacion y garantias*
+
+Criterios de aceptación (mínimos y verificables)
+- Productos
+  - Se puede crear, leer, actualizar y eliminar un producto con los campos: nombre, código de barras, descripción, precio_unitario (>=0), stock_actual (>=0) y stock_minimo.
+  - Al añadir un producto con un código de barras existente, el sistema rechazará la operación y mostrará un mensaje claro.
+- Movimientos de inventario
+  - Se registran entradas, salidas y ajustes; cada movimiento actualiza el stock del producto correspondiente y crea un registro de auditoría con usuario, fecha/hora y motivo.
+- Alertas de stock
+  - Cuando stock_actual <= stock_minimo, el sistema genera una alerta visible en la interfaz y registra la fecha_hora de la alerta.
+- Gestión de usuarios y permisos
+  - Se puede crear un usuario con rol (Administrador o Trabajador).
+  - Inicio de sesión con credenciales funciona; las acciones están restringidas según el rol (por ejemplo, solo Administrador puede gestionar usuarios).
+- Plataforma y despliegue
+  - El instalador o guía de instalación permite desplegar y ejecutar la aplicación en Windows 10 o superior.
+
+Garantías y soporte
+- Período de garantía: corrección de defectos reportados durante 90 días posteriores a la entrega.
+  - Parche crítico: respuesta inicial en 48 horas hábiles.
+  - Corrección de defectos no críticos: dentro de 15 días hábiles, según prioridad acordada.
+- Alcance de la garantía: la garantía cubre defectos funcionales según los criterios de aceptación; no cubre integraciones externas no especificadas (p.ej. facturación o contabilidad).
+- Soporte post-garantía: opciones de contrato de mantenimiento y soporte con tiempos de respuesta y alcance acordados por separado.
+
+Criterio de aceptación final:
+- El cliente valida la entrega cuando todas las pruebas de aceptación documentadas pasan en el entorno de prueba y la documentación requerida ha sido entregada.
 
 *13. Soporte y mantemiento*
-
-
 
 *14. Requisitos Futuros*
 
