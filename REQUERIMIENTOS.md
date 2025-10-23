@@ -85,11 +85,17 @@ Este sistema va dirigido principalmente a 2 tipos de usuarios:
 - Administradores: Manejo básico-intermedio de un sistema de inventario. Tienen acceso al control de stock de los productos, gestión del inventario; añadir, modificar o eliminar perfiles de trabajadores.
 - Trabajadores: Conocimientos básicos, necesitan una interfaz simple para evitar confusiones al usar el sistema. Pueden gestionar el inventario.
 
-*2.4 Restricciones*
+*2.4 *Prioridades*
 
-- Limitaciones del hardware: Necesita como sistema operativo Windows 10 o superior. 
-- Funciones de control: Administradores tendrán control sobre los perfiles de los usuarios incluyendo las funciones de los trabajadores. Los trabajadores podrán realizar controles de stock y gestión de inventario.
-- Consideración acerca de la seguridad: Se implementan mecanismos de autenticación y control de acceso para asegurar que solo el personal autorizado pueda acceder a los datos sensibles del inventario.
+Prioridad alta: 
+- Realizar gestión del inventario (añadir, modificar, eliminar productos).
+- Gestionar precios de los productos.
+
+Prioridad media:
+- Gestionar controles de acceso según el rol del usuario (administrador o trabajador).
+
+Prioridad baja:
+- Sistema de notificaciones (alertar al usuario cuando queden pocas unidades de un producto).
 
 *2.5 Suposiciones*
 
@@ -97,10 +103,82 @@ Este sistema va dirigido principalmente a 2 tipos de usuarios:
 - Si los productos del negocio son más de lo que se tiene previsto el sistema puede ralentizarse.
 - En caso de intentar usar el sistema en otro sistema operativo que no sea Windows no podrá ejecutarse.
 
+*1. Problema del negocio*
 
-*2.6 Requisitos Futuros*
+*2. Usuarios*
+
+*3. Funciones necesarias*
+ 
+*4. Datos a guardar*
+
+Estos datos sera la informacion principal de cada tabla que debomos formar estos seran los datos sobre;
+- Productos: nombre, descripccion, codigo de barras, precio unitario, proveedores y Stock.
+- Proveedores: Nombre, contacto, direccion.
+- Usuraios: Nombres, contraseñas, rol,
+contacto.
+- Configuracion del local: Nombre del local, direccion, horario atencion.
+- registro de movimientos: metodos de pago, moneda, cantidad, producto.
+
+*5. Reglas de negocio*
+
+*6. Proridades*
+
+Prioridad alta: 
+- Realizar gestión del inventario (añadir, modificar, eliminar productos).
+- Gestionar precios de los productos.
+
+Prioridad media:
+- Gestionar controles de acceso según el rol del usuario (administrador o trabajador).
+
+Prioridad baja:
+- Sistema de notificaciones (alertar al usuario cuando queden pocas unidades de un producto).
+
+
+*7. Flujos Principales*
+
+*8. Requerimientos no funcionales*
+
+*9. Plazo deseado*
+
+*10. Definicion de alcance y presupuesto*
+
+*11. Propuesta formal y cronograma de trabajo*
+
+*12. Criterios de aceptacion y garantias*
+
+Criterios de aceptación (mínimos y verificables)
+- Productos
+  - Se puede crear, leer, actualizar y eliminar un producto con los campos: nombre, código de barras, descripción, precio_unitario (>=0), stock_actual (>=0) y stock_minimo.
+  - Al añadir un producto con un código de barras existente, el sistema rechazará la operación y mostrará un mensaje claro.
+- Movimientos de inventario
+  - Se registran entradas, salidas y ajustes; cada movimiento actualiza el stock del producto correspondiente y crea un registro de auditoría con usuario, fecha/hora y motivo.
+- Alertas de stock
+  - Cuando stock_actual <= stock_minimo, el sistema genera una alerta visible en la interfaz y registra la fecha_hora de la alerta.
+- Gestión de usuarios y permisos
+  - Se puede crear un usuario con rol (Administrador o Trabajador).
+  - Inicio de sesión con credenciales funciona; las acciones están restringidas según el rol (por ejemplo, solo Administrador puede gestionar usuarios).
+- Plataforma y despliegue
+  - El instalador o guía de instalación permite desplegar y ejecutar la aplicación en Windows 10 o superior.
+
+Garantías y soporte
+- Período de garantía: corrección de defectos reportados durante 90 días posteriores a la entrega.
+  - Parche crítico: respuesta inicial en 48 horas hábiles.
+  - Corrección de defectos no críticos: dentro de 15 días hábiles, según prioridad acordada.
+- Alcance de la garantía: la garantía cubre defectos funcionales según los criterios de aceptación; no cubre integraciones externas no especificadas (p.ej. facturación o contabilidad).
+- Soporte post-garantía: opciones de contrato de mantenimiento y soporte con tiempos de respuesta y alcance acordados por separado.
+
+Criterio de aceptación final:
+- El cliente valida la entrega cuando todas las pruebas de aceptación documentadas pasan en el entorno de prueba y la documentación requerida ha sido entregada.
+
+*13. Soporte y mantemiento*
+
+*14. Requisitos Futuros*
 
 Como principal requisito aumentar la capacidad del sistema para gestionar mayor cantidad productos y perfiles permitiendo escalar proporcionalmente junto al negocio.
+
+
+
+
 
 
 ||||
