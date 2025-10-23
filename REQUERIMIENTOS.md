@@ -154,7 +154,24 @@ Prioridad baja:
     3. El sistema descuenta los productos del stock cuando se hace la venta 
     
 
-*8. Requerimientos no funcionales*
+### - *Requerimientos no funcionales*
+
+#### - Seguridad:
+  1. El usuario con el rol de trabajador deberá ingresar al sistema con su rut y contraseña que será creada por un usuario con el rol de administrador. De la misma manera para un administrador.
+  2. El primer usuario con el rol de administrador será ingresado por nosotros y a partir de ahi podrá crear mas usuario con roles de administrador o trabajador.
+  3. Los usuarios con rol de administrador podrán restringir el acceso a los trabajadores según sea necesario.
+
+#### - Rendimiento:
+  1. Las consultas a la API no deber tomar mas de dos segundos bajo carga normal en promedio.
+
+#### - Mantenibilidad:
+  1. Se utilizara GitHub para el control de versiones en caso de corrección de bugs o añadir mejoras.
+  2. En caso de que se añadan nuevos modulos a la arquitectura del sistema este deberá permitir seguir usando el sistema principal con normalidad.
+
+#### - Usabilidad:
+  1. La interfaz del sistema debe ser intuitiva con menus claros y opciones visibles.
+  2. Se garantizará que el personal del sistema podrá utilizarlo en poco tiempo o con una capacitación mínima.
+
 
 *9. Plazo deseado*
 
