@@ -157,20 +157,20 @@ Prioridad baja:
 ### - *Requerimientos no funcionales*
 
 #### - Seguridad:
-  1. El usuario con el rol de trabajador deberá ingresar al sistema con su rut y contraseña que será creada por un usuario con el rol de administrador. De la misma manera para un administrador.
-  2. El primer usuario con el rol de administrador será ingresado por nosotros y a partir de ahi podrá crear mas usuario con roles de administrador o trabajador.
-  3. Los usuarios con rol de administrador podrán restringir el acceso a los trabajadores según sea necesario.
+    1. El usuario con el rol de trabajador deberá ingresar al sistema con su rut y contraseña que será creada por un usuario con el rol de administrador. De la misma manera para un administrador.
+    2. El primer usuario con el rol de administrador será ingresado por nosotros y a partir de ahi podrá crear mas usuario con roles de administrador o trabajador.
+    3. Los usuarios con rol de administrador podrán restringir el acceso a los trabajadores según sea necesario.
 
 #### - Rendimiento:
-  1. Las consultas a la API no deber tomar mas de dos segundos bajo carga normal en promedio.
+    1. Las consultas a la API no deber tomar mas de dos segundos bajo carga normal en promedio.
 
 #### - Mantenibilidad:
-  1. Se utilizara GitHub para el control de versiones en caso de corrección de bugs o añadir mejoras.
-  2. En caso de que se añadan nuevos modulos a la arquitectura del sistema este deberá permitir seguir usando el sistema principal con normalidad.
+    1. Se utilizara GitHub para el control de versiones en caso de corrección de bugs o añadir mejoras.
+    2. En caso de que se añadan nuevos modulos a la arquitectura del sistema este deberá permitir seguir usando el sistema principal con normalidad.
 
 #### - Usabilidad:
-  1. La interfaz del sistema debe ser intuitiva con menus claros y opciones visibles.
-  2. Se garantizará que el personal del sistema podrá utilizarlo en poco tiempo o con una capacitación mínima.
+    1. La interfaz del sistema debe ser intuitiva con menus claros y opciones visibles.
+    2. Se garantizará que el personal del sistema podrá utilizarlo en poco tiempo o con una capacitación mínima.
 
 
 *9. Plazo deseado*
@@ -205,7 +205,20 @@ Garantías y soporte
 Criterio de aceptación final:
 - El cliente valida la entrega cuando todas las pruebas de aceptación documentadas pasan en el entorno de prueba y la documentación requerida ha sido entregada.
 
-*13. Soporte y mantemiento*
+### *13. Soporte y mantemiento*
+Una vez entregado el sistema, se proporcionará un período de soporte técnico y mantenimiento durante 4 meses, con el objetivo de asegurar la estabilidad, corregir posibles errores y realizar ajustes menores.
+#### - Alcance del soporte: 
+    1. Correción de errores en las funcionalidades principales (gestión de productos, modificación de precios, gestión de usuarios).
+    2. Ajustes menores como la interfaz o reportes según los requerimientos del cliente.
+    3. Asistencia técnica remota en caso de que el cliente requiera solucionar algún problema con urgencia.
+
+#### - Respaldo: 
+    1. Se realizaran backups semanales de la base de datos los cuales estaran resguardados en un repositorio.
+    2. En caso de pérdida de datos o corrupción de estos se restaurará a partir de la última copia de seguridad disponible.
+
+#### - Tiempos de respuesta (SLA):
+    1. Errores criticos que afecten a la funcionalidad completa o parcial del software se solucionarán en un plazo máximo de 24 horas.
+    2. Errores menores o mejoras solicitadas por el clientes se aplicarán en un rango de 24 horas a 72 horas como plazo máximo.
 
 *14. Requisitos Futuros*
 
