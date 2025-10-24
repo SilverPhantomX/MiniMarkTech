@@ -123,7 +123,58 @@ Prioridad baja:
     -Consulta la disponibilidad de stock
     -Consulta el precio de los productos
 
-*3. Funciones necesarias*
+### *3. Funciones necesarias*
+
+En esta sección se detallan las funciones principales que el sistema de base de datos de MiniMarkTech deberá permitir, tanto para la gestión de productos como de clientes, proveedores y ventas.
+
+*3.1. Gestión de productos*
+
+- Registrar nuevos productos con su nombre, código, categoría, precio y stock.
+- Actualizar la información de un producto (por ejemplo, cambio de precio o cantidad).
+- Eliminar productos descontinuados.
+- Consultar listado de productos y su stock disponible.
+- Generar alertas cuando el stock esté bajo el mínimo establecido.
+
+*3.2. Gestión de ventas*
+
+- Registrar una nueva venta (con fecha, hora, cajero, productos vendidos y total).
+- Calcular el total automáticamente según los productos seleccionados.
+- Emitir boleta o factura
+- Consultar ventas diarias, semanales o mensuales.
+- Registrar forma de pago (efectivo, tarjeta, etc.).
+
+*3.3. Gestión de clientes*
+
+- Registrar clientes frecuentes (nombre, RUT, teléfono, correo).
+- Consultar historial de compras por cliente.
+- Aplicar descuentos o promociones a clientes registrados.
+
+*3.4. Gestión de proveedores*
+
+- Registrar proveedores (nombre, contacto, tipo de productos que suministra).
+- Registrar pedidos a proveedores.
+- Actualizar estado de pedidos (pendiente, recibido, cancelado).
+- Consultar historial de compras a cada proveedor.
+
+*3.5. Gestión de usuarios del sistema*
+
+- Registrar y administrar usuarios (por ejemplo, cajero, administrador).
+- Asignar niveles de acceso según el rol.
+- Registrar inicio y cierre de sesión de cada usuario.
+
+*3.6. Reportes y consultas*
+
+- Generar reportes de ventas por periodo.
+- Mostrar los productos más vendidos.
+- Consultar ganancias totales y promedio diario.
+- Exportar reportes en formato PDF o Excel.
+
+*3.7. Seguridad y respaldo*
+
+- Realizar copias de seguridad automáticas.
+- Restaurar la base de datos desde un respaldo.
+- Validar datos ingresados (por ejemplo, evitar duplicados).
+
  
 *4. Datos a guardar*
 
