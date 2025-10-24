@@ -105,7 +105,23 @@ Prioridad baja:
 
 *1. Problema del negocio*
 
-*2. Usuarios*
+### *2. Usuarios*
+
+#### - Administrador
+    -Gestion de los perfiles
+    -Acceso total a la base de datos
+    -Gestiona las actualizaciones de stock por inventario
+    -Permisos de encargado de bodega y de venta
+
+#### - Encargado de bodega
+    -Actualiza el stock al recibir mercadería
+    -Actualiza el stock al realizar inventario
+    -Gestiona los productos que tienen que ser mermados
+
+#### - Ventas
+    -Registra las ventas realizadas en tiempo real
+    -Consulta la disponibilidad de stock
+    -Consulta el precio de los productos
 
 *3. Funciones necesarias*
  
@@ -154,7 +170,7 @@ Prioridad baja:
     3. El sistema descuenta los productos del stock cuando se hace la venta 
     
 
-### - *Requerimientos no funcionales*
+###  *8 Requerimientos no funcionales*
 
 #### - Seguridad:
     1. El usuario con el rol de trabajador deberá ingresar al sistema con su rut y contraseña que será creada por un usuario con el rol de administrador. De la misma manera para un administrador.
