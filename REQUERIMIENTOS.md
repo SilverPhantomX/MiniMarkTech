@@ -25,9 +25,15 @@ Ammylee Salamanca
 
 
 
-**   
-
 ### *1. Problema del negocio*
+
+Definición del problema
+
+Actualmente, MiniMarkTech enfrenta una falta de centralización en el manejo de su información, ya que los datos relacionados con productos, inventarios y compras se almacenan de manera dispersa en formatos físicos (papel) y archivos digitales independientes (principalmente hojas de cálculo Excel).
+
+Esta práctica provoca pérdidas y duplicación de información, además de dificultar el acceso rápido y confiable a los datos. Como consecuencia, el negocio experimenta errores en el control de stock, dificultades para registrar ventas y retrasos en la toma de decisiones administrativas.
+
+Por esta razón, el cliente requiere el desarrollo de una API con base de datos integrada que permita centralizar, almacenar y gestionar la información de forma segura y eficiente, garantizando la disponibilidad, integridad y trazabilidad de los datos de MiniMarkTech.
 
 ### *2. Usuarios*
 
