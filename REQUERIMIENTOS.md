@@ -187,6 +187,8 @@ contacto.
 
 ### *9. Plazo deseado*
 
+    El desarrollo de la API del sistema MiniMarkTech se estima en **8 semanas**, incluyendo análisis, desarrollo, pruebas y documentación técnica. 
+    El objetivo es entregar una versión funcional y estable al cierre del segundo mes, considerando un margen adicional para validación y ajustes menores previos a la entrega final.   
 ### *10. Definicion de alcance y presupuesto*
 
 
