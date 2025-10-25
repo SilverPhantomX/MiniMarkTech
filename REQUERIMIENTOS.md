@@ -135,7 +135,23 @@ contacto.
 - Configuracion del local: Nombre del local, direccion, horario atencion.
 - registro de movimientos: metodos de pago, moneda, cantidad, producto.
 
-*5. Reglas de negocio*
+### *5. Reglas de negocio*
+
+#### - Control de stock
+
+    -Si un producto se pierde por merma, entonces se descuenta del stock 
+    -Si al hacer inventerio, un producto tiene diferencia de stock, entonces se descuenta del stock 
+    -Los productos que son mermados o robados se registraran como tal
+    -Si un producto es devuelto se registrara y se reincorporara al stock
+    -Cada venta sera registrada y actualizara el stock en tiempo real
+
+#### - Gestion de usarios
+
+    -Solo el administrador puede crear otros usarios
+    
+
+    
+
 
 *6. Proridades*
 
