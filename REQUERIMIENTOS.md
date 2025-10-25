@@ -57,7 +57,7 @@ Por esta razón, el cliente requiere el desarrollo de una API con base de datos 
 
 En esta sección se detallan las funciones principales que el sistema de base de datos de MiniMarkTech deberá permitir, tanto para la gestión de productos como de clientes, proveedores y ventas.
 
-*3.1. Gestión de productos*
+#### Gestión de productos
 
 - Registrar nuevos productos con su nombre, código, categoría, precio y stock.
 - Actualizar la información de un producto (por ejemplo, cambio de precio o cantidad).
@@ -65,7 +65,7 @@ En esta sección se detallan las funciones principales que el sistema de base de
 - Consultar listado de productos y su stock disponible.
 - Generar alertas cuando el stock esté bajo el mínimo establecido.
 
-*3.2. Gestión de ventas*
+#### Gestión de ventas
 
 - Registrar una nueva venta (con fecha, hora, cajero, productos vendidos y total).
 - Calcular el total automáticamente según los productos seleccionados.
@@ -73,40 +73,40 @@ En esta sección se detallan las funciones principales que el sistema de base de
 - Consultar ventas diarias, semanales o mensuales.
 - Registrar forma de pago (efectivo, tarjeta, etc.).
 
-*3.3. Gestión de clientes*
+#### Gestión de clientes
 
 - Registrar clientes frecuentes (nombre, RUT, teléfono, correo).
 - Consultar historial de compras por cliente.
 - Aplicar descuentos o promociones a clientes registrados.
 
-*3.4. Gestión de proveedores*
+#### Gestión de proveedores
 
 - Registrar proveedores (nombre, contacto, tipo de productos que suministra).
 - Registrar pedidos a proveedores.
 - Actualizar estado de pedidos (pendiente, recibido, cancelado).
 - Consultar historial de compras a cada proveedor.
 
-*3.5. Gestión de usuarios del sistema*
+#### Gestión de usuarios del sistema
 
 - Registrar y administrar usuarios (por ejemplo, cajero, administrador).
 - Asignar niveles de acceso según el rol.
 - Registrar inicio y cierre de sesión de cada usuario.
 
-*3.6. Reportes y consultas*
+#### Reportes y consultas
 
 - Generar reportes de ventas por periodo.
 - Mostrar los productos más vendidos.
 - Consultar ganancias totales y promedio diario.
 - Exportar reportes en formato PDF o Excel.
 
-*3.7. Seguridad y respaldo*
+#### Seguridad y respaldo
 
 - Realizar copias de seguridad automáticas.
 - Restaurar la base de datos desde un respaldo.
 - Validar datos ingresados (por ejemplo, evitar duplicados).
 
  
-*4. Datos a guardar*
+### *4. Datos a guardar*
 
 Estos datos sera la informacion principal de cada tabla que debomos formar estos seran los datos sobre;
 - Productos: nombre, descripccion, codigo de barras, precio unitario, proveedores y Stock.
@@ -116,22 +116,43 @@ contacto.
 - Configuracion del local: Nombre del local, direccion, horario atencion.
 - registro de movimientos: metodos de pago, moneda, cantidad, producto.
 
-*5. Reglas de negocio*
+### *5. Reglas de negocio*
 
-*6. Proridades*
+#### - Control de stock
 
-Prioridad alta: 
+    -Si un producto se pierde por merma, entonces se descuenta del stock 
+    -Si al hacer inventerio, un producto tiene diferencia de stock, entonces se descuenta del stock 
+    -Los productos que son mermados o robados se registraran como tal
+    -Si un producto es devuelto se registrara y se reincorporara al stock
+    -Cada venta sera registrada y actualizara el stock en tiempo real
+
+#### - Gestion de usarios
+
+    -Solo el administrador puede crear otros usarios
+    - Si un usuario intenta realizar una acción para la cual no tiene permisos, entonces el sistema debe denegar la operación y registrar el intento.
+
+#### - Respaldo y recuperación
+    - El sistema debe realizar respaldos automáticos de la base de datos de forma periódica.  
+    - Si ocurre un fallo o pérdida de conexión, los datos no deben perderse; el sistema debe poder recuperarse sin inconsistencias.
+    
+
+    
+
+
+### *6. Proridades*
+
+#### Prioridad alta: 
 - Realizar gestión del inventario (añadir, modificar, eliminar productos).
 - Gestionar precios de los productos.
 
-Prioridad media:
+#### Prioridad media:
 - Gestionar controles de acceso según el rol del usuario (administrador o trabajador).
 
-Prioridad baja:
+#### Prioridad baja:
 - Sistema de notificaciones (alertar al usuario cuando queden pocas unidades de un producto).
 
 
-### *7 Flujos Principales*
+### *7. Flujos Principales*
 
 #### - Flujo de registro y control de inventario
     1. Se hace una lista de productos que pueden tener diferencias con el inventario 
@@ -151,7 +172,7 @@ Prioridad baja:
     3. El sistema descuenta los productos del stock cuando se hace la venta 
     
 
-###  *8 Requerimientos no funcionales*
+### *8. Requerimientos no funcionales*
 
 #### - Seguridad:
     1. El usuario con el rol de trabajador deberá ingresar al sistema con su rut y contraseña que será creada por un usuario con el rol de administrador. De la misma manera para un administrador.
@@ -170,17 +191,19 @@ Prioridad baja:
     2. Se garantizará que el personal del sistema podrá utilizarlo en poco tiempo o con una capacitación mínima.
 
 
-*9. Plazo deseado*
+### *9. Plazo deseado*
 
-###*10. Definicion de alcance y presupuesto*
+    El desarrollo de la API del sistema MiniMarkTech se estima en **8 semanas**, incluyendo análisis, desarrollo, pruebas y documentación técnica. 
+    El objetivo es entregar una versión funcional y estable al cierre del segundo mes, considerando un margen adicional para validación y ajustes menores previos a la entrega final.   
+### *10. Definicion de alcance y presupuesto*
 
 
-*10.1 Alcance del proyecto*
+#### Alcance del proyecto
 
 El presente proyecto contempla el desarrollo e implementación de la API del sistema MiniMarkTech, diseñada para optimizar la gestión de inventario, ventas, proveedores y clientes en un minimarket.
 El alcance técnico se limita al desarrollo del backend mediante el uso de Express.js (Node.js) y MongoDB como base de datos principal, entregando una infraestructura escalable, segura y preparada para futuras integraciones con interfaces web o móviles.
 
-Alcance funcional:
+#### Alcance funcional:
 
 - Desarrollo de una API RESTful con endpoints que permitan realizar operaciones CRUD sobre las entidades del sistema: productos, clientes, proveedores, usuarios y ventas.
 - Implementación de autenticación y autorización de usuarios, diferenciando roles (administrador y trabajador).
@@ -189,14 +212,14 @@ Alcance funcional:
 - Implementación de control de errores, validaciones de datos y registros de actividad.
 - Configuración de seguridad y respaldo de datos mediante integración con MongoDB Atlas o servidor propio.
 
-Fuera del alcance:
+#### Fuera del alcance:
 
 - No se incluye desarrollo de interfaz visual (web o móvil).
 - No se contempla integración con sistemas externos de facturación, contabilidad o e-commerce.
 - No se considera hosting ni mantenimiento post-entrega, salvo contratación adicional.
 - No se desarrollarán módulos de delivery o catálogo en línea.
 
-*10.2 Presupuesto estimado*
+#### 10.1 Presupuesto estimado
 
 El presupuesto del proyecto contempla los costos asociados al análisis, desarrollo, pruebas y documentación técnica de la API.
 
@@ -238,11 +261,63 @@ Observaciones:
 - No incluye costos de hosting, dominios ni soporte posterior a la entrega.
 - Se ofrece garantía técnica de 30 días posteriores a la implementación, exclusivamente para corrección de errores.
 
-*11. Propuesta formal y cronograma de trabajo*
 
-*12. Criterios de aceptacion y garantias*
+### *11. Propuesta formal y cronograma de trabajo*
 
-Criterios de aceptación (mínimos y verificables)
+#### Propuesta formal
+  - Objetivo: Entregar una solución de gestión de inventario funcional en entorno Windows 10+, que permita registrar productos, gestionar stock, controlar usuarios y generar alertas de bajo inventario según los criterios definidos en este documento.
+  - Alcance de la entrega inicial (MVP):
+  - Módulo de productos (CRUD).
+  - Registro y control de movimientos de inventario (entradas/salidas/ajustes).
+  - Gestión de usuarios y roles (Administrador, Trabajador).
+  - Alertas de stock y registro de auditoría.
+  - Documentación: manual de usuario, guía de instalación y procedimiento de backup/restauración.
+#### - Entregables:
+    - Código fuente en repositorio (GitHub).
+    - Instalador o guía de despliegue para Windows.
+    - Conjunto de pruebas de aceptación y resultados.
+    - Plan de soporte y garantía (90 días + opciones de mantenimiento).
+
+#### Cronograma de trabajo (sugerido)
+- Duración total estimada: 10 semanas.
+- Fase 0 — Inicio y definición (1 semana)
+  - Actividades: kickoff, definición detallada de requisitos, validación del alcance.
+  - Entregable: Documento de especificaciones finales y plan de proyecto.
+- Fase 1 — Diseño (1 semana)
+  - Actividades: diseño de arquitectura, modelo de datos y wireframes básicos.
+  - Entregable: diagramas ER, mockups y plan de pruebas.
+- Fase 2 — Implementación MVP (4 semanas)
+  - Actividades: desarrollo de módulos de productos, movimientos, usuarios y alertas.
+  - Entregable: versión funcional interna (build).
+- Fase 3 — Integración y pruebas (2 semanas)
+  - Actividades: pruebas unitarias, integración, corrección de errores y verificación de rendimiento.
+  - Entregable: build para pruebas de aceptación.
+- Fase 4 — Pruebas de aceptación y ajustes (1 semana)
+  - Actividades: pruebas con usuarios, ajustes según feedback, documentación final.
+  - Entregable: versión candidata a entrega.
+- Fase 5 — Entrega, capacitación y despliegue (1 semana)
+  - Actividades: instalación en entorno del cliente, capacitación a usuarios clave, entrega de documentación.
+  - Entregable: entrega formal y aceptación del cliente.
+
+#### Hitos y criterios de aceptación
+- Hito 1: Aprobación del documento de especificaciones (Fase 0) — avance al 10%.
+- Hito 2: Diseño aprobado y modelo de datos implementado (Fase 1) — avance al 20%.
+- Hito 3: MVP funcional comprobado internamente (Fase 2) — avance al 70%.
+- Hito 4: Pruebas de aceptación completadas y correcciones aplicadas (Fase 4) — avance al 90%.
+- Hito 5: Entrega final, capacitación y aceptación formal del cliente (Fase 5) — avance al 100%.
+
+#### Asunciones y condiciones
+- El cronograma asume disponibilidad de recursos del cliente para validaciones y pruebas (usuarios clave).
+- El alcance indicado corresponde al MVP; nuevas funcionalidades serán planificadas como fases posteriores.
+- Tiempo de respuesta para retroalimentación del cliente: máximo 5 días hábiles por ciclo de revisión.
+
+#### Opcional: Plan de mantenimiento
+- Período de garantía incluido: 90 días (corrección de defectos).
+- Opcional contrato de soporte posterior con SLA según requerimientos del cliente.
+
+### *12. Criterios de aceptacion y garantias*
+
+#### Criterios de aceptación (mínimos y verificables)
 - Productos
   - Se puede crear, leer, actualizar y eliminar un producto con los campos: nombre, código de barras, descripción, precio_unitario (>=0), stock_actual (>=0) y stock_minimo.
   - Al añadir un producto con un código de barras existente, el sistema rechazará la operación y mostrará un mensaje claro.
@@ -256,14 +331,14 @@ Criterios de aceptación (mínimos y verificables)
 - Plataforma y despliegue
   - El instalador o guía de instalación permite desplegar y ejecutar la aplicación en Windows 10 o superior.
 
-Garantías y soporte
+### *13. Garantías y soporte*
 - Período de garantía: corrección de defectos reportados durante 90 días posteriores a la entrega.
   - Parche crítico: respuesta inicial en 48 horas hábiles.
   - Corrección de defectos no críticos: dentro de 15 días hábiles, según prioridad acordada.
 - Alcance de la garantía: la garantía cubre defectos funcionales según los criterios de aceptación; no cubre integraciones externas no especificadas (p.ej. facturación o contabilidad).
 - Soporte post-garantía: opciones de contrato de mantenimiento y soporte con tiempos de respuesta y alcance acordados por separado.
 
-Criterio de aceptación final:
+#### Criterio de aceptación final:
 - El cliente valida la entrega cuando todas las pruebas de aceptación documentadas pasan en el entorno de prueba y la documentación requerida ha sido entregada.
 
 ### *13. Soporte y mantemiento*
@@ -281,7 +356,7 @@ Una vez entregado el sistema, se proporcionará un período de soporte técnico 
     1. Errores criticos que afecten a la funcionalidad completa o parcial del software se solucionarán en un plazo máximo de 24 horas.
     2. Errores menores o mejoras solicitadas por el clientes se aplicarán en un rango de 24 horas a 72 horas como plazo máximo.
 
-*14. Requisitos Futuros*
+### *14. Requisitos Futuros*
 
 Como principal requisito aumentar la capacidad del sistema para gestionar mayor cantidad productos y perfiles permitiendo escalar proporcionalmente junto al negocio.
 
