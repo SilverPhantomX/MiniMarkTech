@@ -246,6 +246,57 @@ Prioridad baja:
 
 *11. Propuesta formal y cronograma de trabajo*
 
+Propuesta formal
+- Objetivo: Entregar una solución de gestión de inventario funcional en entorno Windows 10+, que permita registrar productos, gestionar stock, controlar usuarios y generar alertas de bajo inventario según los criterios definidos en este documento.
+- Alcance de la entrega inicial (MVP):
+  - Módulo de productos (CRUD).
+  - Registro y control de movimientos de inventario (entradas/salidas/ajustes).
+  - Gestión de usuarios y roles (Administrador, Trabajador).
+  - Alertas de stock y registro de auditoría.
+  - Documentación: manual de usuario, guía de instalación y procedimiento de backup/restauración.
+- Entregables:
+  - Código fuente en repositorio (GitHub).
+  - Instalador o guía de despliegue para Windows.
+  - Conjunto de pruebas de aceptación y resultados.
+  - Plan de soporte y garantía (90 días + opciones de mantenimiento).
+
+Cronograma de trabajo (sugerido)
+- Duración total estimada: 10 semanas.
+- Fase 0 — Inicio y definición (1 semana)
+  - Actividades: kickoff, definición detallada de requisitos, validación del alcance.
+  - Entregable: Documento de especificaciones finales y plan de proyecto.
+- Fase 1 — Diseño (1 semana)
+  - Actividades: diseño de arquitectura, modelo de datos y wireframes básicos.
+  - Entregable: diagramas ER, mockups y plan de pruebas.
+- Fase 2 — Implementación MVP (4 semanas)
+  - Actividades: desarrollo de módulos de productos, movimientos, usuarios y alertas.
+  - Entregable: versión funcional interna (build).
+- Fase 3 — Integración y pruebas (2 semanas)
+  - Actividades: pruebas unitarias, integración, corrección de errores y verificación de rendimiento.
+  - Entregable: build para pruebas de aceptación.
+- Fase 4 — Pruebas de aceptación y ajustes (1 semana)
+  - Actividades: pruebas con usuarios, ajustes según feedback, documentación final.
+  - Entregable: versión candidata a entrega.
+- Fase 5 — Entrega, capacitación y despliegue (1 semana)
+  - Actividades: instalación en entorno del cliente, capacitación a usuarios clave, entrega de documentación.
+  - Entregable: entrega formal y aceptación del cliente.
+
+Hitos y criterios de aceptación
+- Hito 1: Aprobación del documento de especificaciones (Fase 0) — avance al 10%.
+- Hito 2: Diseño aprobado y modelo de datos implementado (Fase 1) — avance al 20%.
+- Hito 3: MVP funcional comprobado internamente (Fase 2) — avance al 70%.
+- Hito 4: Pruebas de aceptación completadas y correcciones aplicadas (Fase 4) — avance al 90%.
+- Hito 5: Entrega final, capacitación y aceptación formal del cliente (Fase 5) — avance al 100%.
+
+Asunciones y condiciones
+- El cronograma asume disponibilidad de recursos del cliente para validaciones y pruebas (usuarios clave).
+- El alcance indicado corresponde al MVP; nuevas funcionalidades serán planificadas como fases posteriores.
+- Tiempo de respuesta para retroalimentación del cliente: máximo 5 días hábiles por ciclo de revisión.
+
+Opcional: Plan de mantenimiento
+- Período de garantía incluido: 90 días (corrección de defectos).
+- Opcional contrato de soporte posterior con SLA según requerimientos del cliente.
+
 *12. Criterios de aceptacion y garantias*
 
 Criterios de aceptación (mínimos y verificables)
