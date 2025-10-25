@@ -148,6 +148,11 @@ contacto.
 #### - Gestion de usarios
 
     -Solo el administrador puede crear otros usarios
+    - Si un usuario intenta realizar una acción para la cual no tiene permisos, entonces el sistema debe denegar la operación y registrar el intento.
+
+#### - Respaldo y recuperación
+    - El sistema debe realizar respaldos automáticos de la base de datos de forma periódica.  
+    - Si ocurre un fallo o pérdida de conexión, los datos no deben perderse; el sistema debe poder recuperarse sin inconsistencias.
     
 
     
