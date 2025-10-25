@@ -112,6 +112,27 @@ contacto.
 
 ### *5. Reglas de negocio*
 
+#### - Control de stock
+
+    -Si un producto se pierde por merma, entonces se descuenta del stock 
+    -Si al hacer inventerio, un producto tiene diferencia de stock, entonces se descuenta del stock 
+    -Los productos que son mermados o robados se registraran como tal
+    -Si un producto es devuelto se registrara y se reincorporara al stock
+    -Cada venta sera registrada y actualizara el stock en tiempo real
+
+#### - Gestion de usarios
+
+    -Solo el administrador puede crear otros usarios
+    - Si un usuario intenta realizar una acción para la cual no tiene permisos, entonces el sistema debe denegar la operación y registrar el intento.
+
+#### - Respaldo y recuperación
+    - El sistema debe realizar respaldos automáticos de la base de datos de forma periódica.  
+    - Si ocurre un fallo o pérdida de conexión, los datos no deben perderse; el sistema debe poder recuperarse sin inconsistencias.
+    
+
+    
+
+
 ### *6. Proridades*
 
 #### Prioridad alta: 
