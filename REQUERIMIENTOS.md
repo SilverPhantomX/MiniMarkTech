@@ -25,85 +25,9 @@ Ammylee Salamanca
 
 
 
-
 **   
 
-
-
-
-**1. Introducción**
-
-El presente documento describe los requisitos de software del sistema MiniMarkTech, una herramienta diseñada para optimizar la gestión de inventario en un minimarket. Su propósito es facilitar el control de productos, mejorar la organización y reducir la posibilidad de quiebres de stock mediante alertas automáticas y consultas rápidas. Además, establece de manera estructurada las funcionalidades, restricciones, atributos y lineamientos técnicos que guiarán el desarrollo e implementación del sistema.
-
-*1.1 Alcance*
-
-La especificación de requisitos de este documento está dirigida para los usuarios 	que utilicen este sistema con el objetivo principal de gestionar procesos de	inventario (control de stock, etc) y administración de roles de usuarios.
-
-*1.2 Propósito:*** 
-
-El propósito del software es crear una herramienta eficaz para apoyar la gestión de inventario lo que permite llevar un listado de productos, registrar entrada y salida de mercadería y detectar cuando un producto esté casi sin stock permitiendo al propietario tener un control simple y confiable de la mercadería. 
-
-*1.3 Lo mínimo que podrá hacer el programa:*
-
-Podrá añadir o eliminar productos y controlar la entrada y salida de 		mercadería.  
-
-*1.4 Ámbito del Sistema:*
-
-`      `El Nombre del Sistema será **MiniMarkTech®**
-
-**Que hará el sistema:** 
-
-- Mantener un catálogo de productos organizado con sus respectivos datos como: nombre, código de barras, precio, stock y descripción
-- Consultas rápidas de Stock
-- Avisar cuando un producto este bajo en stock
-
-**Que no hará el sistema:** 
-
-- No generara facturas ni boletas
-- No integrara sistema de contabilidad
-- No tendrá catalogo Online ni delivery propio
-
-
-**2. Descripciones**
-
-`  `*2.1 Perspectiva del producto:*
-
-- El sistema de gestión del inventario funcionará solamente dentro del local en donde se espera que el dueño, vendedor o trabajador del local lo utilice. En cuanto al hardware se requerirá cualquier computador de escritorio gama baja-media como mínimo con Windows 10 o superior y terminales con lectores de código de barras para la registrar los productos.
-
-*2.2 Funciones del producto*
-
-- Usuarios: Controles de niveles de acceso como trabajador, administrador. Registrar, modificar o eliminar de trabajadores o administradores.
-- Gestión de inventario: Registrar productos nuevos, consultar el stock de estos y actualizar información.
-- Control de stock: Alertar al usuario cuando queden pocas unidades de un producto.
-
-
-
-*2.3 Características de los usuarios*
-
-Este sistema va dirigido principalmente a 2 tipos de usuarios:
-
-- Administradores: Manejo básico-intermedio de un sistema de inventario. Tienen acceso al control de stock de los productos, gestión del inventario; añadir, modificar o eliminar perfiles de trabajadores.
-- Trabajadores: Conocimientos básicos, necesitan una interfaz simple para evitar confusiones al usar el sistema. Pueden gestionar el inventario.
-
-*2.4 *Prioridades*
-
-Prioridad alta: 
-- Realizar gestión del inventario (añadir, modificar, eliminar productos).
-- Gestionar precios de los productos.
-
-Prioridad media:
-- Gestionar controles de acceso según el rol del usuario (administrador o trabajador).
-
-Prioridad baja:
-- Sistema de notificaciones (alertar al usuario cuando queden pocas unidades de un producto).
-
-*2.5 Suposiciones*
-
-- Si el hardware del dispositivo se encuentra desactualizado este podría generar conflictos al momento de realizar cambios en el sistema.
-- Si los productos del negocio son más de lo que se tiene previsto el sistema puede ralentizarse.
-- En caso de intentar usar el sistema en otro sistema operativo que no sea Windows no podrá ejecutarse.
-
-*1. Problema del negocio*
+### *1. Problema del negocio*
 
 ### *2. Usuarios*
 
@@ -127,7 +51,7 @@ Prioridad baja:
 
 En esta sección se detallan las funciones principales que el sistema de base de datos de MiniMarkTech deberá permitir, tanto para la gestión de productos como de clientes, proveedores y ventas.
 
-*3.1. Gestión de productos*
+#### Gestión de productos
 
 - Registrar nuevos productos con su nombre, código, categoría, precio y stock.
 - Actualizar la información de un producto (por ejemplo, cambio de precio o cantidad).
@@ -135,7 +59,7 @@ En esta sección se detallan las funciones principales que el sistema de base de
 - Consultar listado de productos y su stock disponible.
 - Generar alertas cuando el stock esté bajo el mínimo establecido.
 
-*3.2. Gestión de ventas*
+#### Gestión de ventas
 
 - Registrar una nueva venta (con fecha, hora, cajero, productos vendidos y total).
 - Calcular el total automáticamente según los productos seleccionados.
@@ -143,40 +67,40 @@ En esta sección se detallan las funciones principales que el sistema de base de
 - Consultar ventas diarias, semanales o mensuales.
 - Registrar forma de pago (efectivo, tarjeta, etc.).
 
-*3.3. Gestión de clientes*
+#### Gestión de clientes
 
 - Registrar clientes frecuentes (nombre, RUT, teléfono, correo).
 - Consultar historial de compras por cliente.
 - Aplicar descuentos o promociones a clientes registrados.
 
-*3.4. Gestión de proveedores*
+#### Gestión de proveedores
 
 - Registrar proveedores (nombre, contacto, tipo de productos que suministra).
 - Registrar pedidos a proveedores.
 - Actualizar estado de pedidos (pendiente, recibido, cancelado).
 - Consultar historial de compras a cada proveedor.
 
-*3.5. Gestión de usuarios del sistema*
+#### Gestión de usuarios del sistema
 
 - Registrar y administrar usuarios (por ejemplo, cajero, administrador).
 - Asignar niveles de acceso según el rol.
 - Registrar inicio y cierre de sesión de cada usuario.
 
-*3.6. Reportes y consultas*
+#### Reportes y consultas
 
 - Generar reportes de ventas por periodo.
 - Mostrar los productos más vendidos.
 - Consultar ganancias totales y promedio diario.
 - Exportar reportes en formato PDF o Excel.
 
-*3.7. Seguridad y respaldo*
+#### Seguridad y respaldo
 
 - Realizar copias de seguridad automáticas.
 - Restaurar la base de datos desde un respaldo.
 - Validar datos ingresados (por ejemplo, evitar duplicados).
 
  
-*4. Datos a guardar*
+### *4. Datos a guardar*
 
 Estos datos sera la informacion principal de cada tabla que debomos formar estos seran los datos sobre;
 - Productos: nombre, descripccion, codigo de barras, precio unitario, proveedores y Stock.
@@ -186,22 +110,22 @@ contacto.
 - Configuracion del local: Nombre del local, direccion, horario atencion.
 - registro de movimientos: metodos de pago, moneda, cantidad, producto.
 
-*5. Reglas de negocio*
+### *5. Reglas de negocio*
 
-*6. Proridades*
+### *6. Proridades*
 
-Prioridad alta: 
+#### Prioridad alta: 
 - Realizar gestión del inventario (añadir, modificar, eliminar productos).
 - Gestionar precios de los productos.
 
-Prioridad media:
+#### Prioridad media:
 - Gestionar controles de acceso según el rol del usuario (administrador o trabajador).
 
-Prioridad baja:
+#### Prioridad baja:
 - Sistema de notificaciones (alertar al usuario cuando queden pocas unidades de un producto).
 
 
-### *7 Flujos Principales*
+### *7. Flujos Principales*
 
 #### - Flujo de registro y control de inventario
     1. Se hace una lista de productos que pueden tener diferencias con el inventario 
@@ -221,7 +145,7 @@ Prioridad baja:
     3. El sistema descuenta los productos del stock cuando se hace la venta 
     
 
-###  *8 Requerimientos no funcionales*
+### *8. Requerimientos no funcionales*
 
 #### - Seguridad:
     1. El usuario con el rol de trabajador deberá ingresar al sistema con su rut y contraseña que será creada por un usuario con el rol de administrador. De la misma manera para un administrador.
@@ -240,17 +164,17 @@ Prioridad baja:
     2. Se garantizará que el personal del sistema podrá utilizarlo en poco tiempo o con una capacitación mínima.
 
 
-*9. Plazo deseado*
+### *9. Plazo deseado*
 
-###*10. Definicion de alcance y presupuesto*
+### *10. Definicion de alcance y presupuesto*
 
 
-*10.1 Alcance del proyecto*
+#### Alcance del proyecto
 
 El presente proyecto contempla el desarrollo e implementación de la API del sistema MiniMarkTech, diseñada para optimizar la gestión de inventario, ventas, proveedores y clientes en un minimarket.
 El alcance técnico se limita al desarrollo del backend mediante el uso de Express.js (Node.js) y MongoDB como base de datos principal, entregando una infraestructura escalable, segura y preparada para futuras integraciones con interfaces web o móviles.
 
-Alcance funcional:
+#### Alcance funcional:
 
 - Desarrollo de una API RESTful con endpoints que permitan realizar operaciones CRUD sobre las entidades del sistema: productos, clientes, proveedores, usuarios y ventas.
 - Implementación de autenticación y autorización de usuarios, diferenciando roles (administrador y trabajador).
@@ -259,14 +183,14 @@ Alcance funcional:
 - Implementación de control de errores, validaciones de datos y registros de actividad.
 - Configuración de seguridad y respaldo de datos mediante integración con MongoDB Atlas o servidor propio.
 
-Fuera del alcance:
+#### Fuera del alcance:
 
 - No se incluye desarrollo de interfaz visual (web o móvil).
 - No se contempla integración con sistemas externos de facturación, contabilidad o e-commerce.
 - No se considera hosting ni mantenimiento post-entrega, salvo contratación adicional.
 - No se desarrollarán módulos de delivery o catálogo en línea.
 
-*10.2 Presupuesto estimado*
+#### 10.1 Presupuesto estimado
 
 El presupuesto del proyecto contempla los costos asociados al análisis, desarrollo, pruebas y documentación técnica de la API.
 
@@ -309,23 +233,23 @@ Observaciones:
 - Se ofrece garantía técnica de 30 días posteriores a la implementación, exclusivamente para corrección de errores.
 
 
-*11. Propuesta formal y cronograma de trabajo*
+### *11. Propuesta formal y cronograma de trabajo*
 
-Propuesta formal
-- Objetivo: Entregar una solución de gestión de inventario funcional en entorno Windows 10+, que permita registrar productos, gestionar stock, controlar usuarios y generar alertas de bajo inventario según los criterios definidos en este documento.
-- Alcance de la entrega inicial (MVP):
+#### Propuesta formal
+  - Objetivo: Entregar una solución de gestión de inventario funcional en entorno Windows 10+, que permita registrar productos, gestionar stock, controlar usuarios y generar alertas de bajo inventario según los criterios definidos en este documento.
+  - Alcance de la entrega inicial (MVP):
   - Módulo de productos (CRUD).
   - Registro y control de movimientos de inventario (entradas/salidas/ajustes).
   - Gestión de usuarios y roles (Administrador, Trabajador).
   - Alertas de stock y registro de auditoría.
   - Documentación: manual de usuario, guía de instalación y procedimiento de backup/restauración.
-- Entregables:
-  - Código fuente en repositorio (GitHub).
-  - Instalador o guía de despliegue para Windows.
-  - Conjunto de pruebas de aceptación y resultados.
-  - Plan de soporte y garantía (90 días + opciones de mantenimiento).
+#### - Entregables:
+    - Código fuente en repositorio (GitHub).
+    - Instalador o guía de despliegue para Windows.
+    - Conjunto de pruebas de aceptación y resultados.
+    - Plan de soporte y garantía (90 días + opciones de mantenimiento).
 
-Cronograma de trabajo (sugerido)
+#### Cronograma de trabajo (sugerido)
 - Duración total estimada: 10 semanas.
 - Fase 0 — Inicio y definición (1 semana)
   - Actividades: kickoff, definición detallada de requisitos, validación del alcance.
@@ -346,25 +270,25 @@ Cronograma de trabajo (sugerido)
   - Actividades: instalación en entorno del cliente, capacitación a usuarios clave, entrega de documentación.
   - Entregable: entrega formal y aceptación del cliente.
 
-Hitos y criterios de aceptación
+#### Hitos y criterios de aceptación
 - Hito 1: Aprobación del documento de especificaciones (Fase 0) — avance al 10%.
 - Hito 2: Diseño aprobado y modelo de datos implementado (Fase 1) — avance al 20%.
 - Hito 3: MVP funcional comprobado internamente (Fase 2) — avance al 70%.
 - Hito 4: Pruebas de aceptación completadas y correcciones aplicadas (Fase 4) — avance al 90%.
 - Hito 5: Entrega final, capacitación y aceptación formal del cliente (Fase 5) — avance al 100%.
 
-Asunciones y condiciones
+#### Asunciones y condiciones
 - El cronograma asume disponibilidad de recursos del cliente para validaciones y pruebas (usuarios clave).
 - El alcance indicado corresponde al MVP; nuevas funcionalidades serán planificadas como fases posteriores.
 - Tiempo de respuesta para retroalimentación del cliente: máximo 5 días hábiles por ciclo de revisión.
 
-Opcional: Plan de mantenimiento
+#### Opcional: Plan de mantenimiento
 - Período de garantía incluido: 90 días (corrección de defectos).
 - Opcional contrato de soporte posterior con SLA según requerimientos del cliente.
 
-*12. Criterios de aceptacion y garantias*
+### *12. Criterios de aceptacion y garantias*
 
-Criterios de aceptación (mínimos y verificables)
+#### Criterios de aceptación (mínimos y verificables)
 - Productos
   - Se puede crear, leer, actualizar y eliminar un producto con los campos: nombre, código de barras, descripción, precio_unitario (>=0), stock_actual (>=0) y stock_minimo.
   - Al añadir un producto con un código de barras existente, el sistema rechazará la operación y mostrará un mensaje claro.
@@ -378,14 +302,14 @@ Criterios de aceptación (mínimos y verificables)
 - Plataforma y despliegue
   - El instalador o guía de instalación permite desplegar y ejecutar la aplicación en Windows 10 o superior.
 
-Garantías y soporte
+### *13. Garantías y soporte*
 - Período de garantía: corrección de defectos reportados durante 90 días posteriores a la entrega.
   - Parche crítico: respuesta inicial en 48 horas hábiles.
   - Corrección de defectos no críticos: dentro de 15 días hábiles, según prioridad acordada.
 - Alcance de la garantía: la garantía cubre defectos funcionales según los criterios de aceptación; no cubre integraciones externas no especificadas (p.ej. facturación o contabilidad).
 - Soporte post-garantía: opciones de contrato de mantenimiento y soporte con tiempos de respuesta y alcance acordados por separado.
 
-Criterio de aceptación final:
+#### Criterio de aceptación final:
 - El cliente valida la entrega cuando todas las pruebas de aceptación documentadas pasan en el entorno de prueba y la documentación requerida ha sido entregada.
 
 ### *13. Soporte y mantemiento*
@@ -403,7 +327,7 @@ Una vez entregado el sistema, se proporcionará un período de soporte técnico 
     1. Errores criticos que afecten a la funcionalidad completa o parcial del software se solucionarán en un plazo máximo de 24 horas.
     2. Errores menores o mejoras solicitadas por el clientes se aplicarán en un rango de 24 horas a 72 horas como plazo máximo.
 
-*14. Requisitos Futuros*
+### *14. Requisitos Futuros*
 
 Como principal requisito aumentar la capacidad del sistema para gestionar mayor cantidad productos y perfiles permitiendo escalar proporcionalmente junto al negocio.
 
