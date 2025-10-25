@@ -242,7 +242,72 @@ Prioridad baja:
 
 *9. Plazo deseado*
 
-*10. Definicion de alcance y presupuesto*
+###*10. Definicion de alcance y presupuesto*
+
+
+*10.1 Alcance del proyecto*
+
+El presente proyecto contempla el desarrollo e implementación de la API del sistema MiniMarkTech, diseñada para optimizar la gestión de inventario, ventas, proveedores y clientes en un minimarket.
+El alcance técnico se limita al desarrollo del backend mediante el uso de Express.js (Node.js) y MongoDB como base de datos principal, entregando una infraestructura escalable, segura y preparada para futuras integraciones con interfaces web o móviles.
+
+Alcance funcional:
+
+- Desarrollo de una API RESTful con endpoints que permitan realizar operaciones CRUD sobre las entidades del sistema: productos, clientes, proveedores, usuarios y ventas.
+- Implementación de autenticación y autorización de usuarios, diferenciando roles (administrador y trabajador).
+- Gestión de alertas de stock bajo con consultas automáticas.
+- Generación de reportes de ventas e inventario exportables en formato JSON o PDF.
+- Implementación de control de errores, validaciones de datos y registros de actividad.
+- Configuración de seguridad y respaldo de datos mediante integración con MongoDB Atlas o servidor propio.
+
+Fuera del alcance:
+
+- No se incluye desarrollo de interfaz visual (web o móvil).
+- No se contempla integración con sistemas externos de facturación, contabilidad o e-commerce.
+- No se considera hosting ni mantenimiento post-entrega, salvo contratación adicional.
+- No se desarrollarán módulos de delivery o catálogo en línea.
+
+*10.2 Presupuesto estimado*
+
+El presupuesto del proyecto contempla los costos asociados al análisis, desarrollo, pruebas y documentación técnica de la API.
+
+Recursos requeridos:
+
+Equipo de desarrollo:
+- 1 Líder técnico / backend senior.
+- 2 Desarrolladores backend.
+- 1 QA tester / analista funcional.
+- Duración estimada: 6 a 8 semanas de trabajo.
+- Tecnologías y herramientas:
+- Node.js + Express.js (entorno de desarrollo gratuito).
+- MongoDB Atlas (plan estándar de 5 GB).
+- Postman (para pruebas).
+- GitHub o GitLab (control de versiones).
+- Servicios de nube (opcional): AWS o Render para despliegue.
+
+Estimación de costos:
+
+- Análisis y diseño del sistema:
+Modelado de datos, endpoints, seguridad
+$250.000
+- Desarrollo backend (API):
+Implementación CRUD, autenticación, reportes
+$750.000
+- Pruebas y validación:
+Testeo funcional, integración y corrección de errores
+$200.000
+- Documentación técnica
+Manual de instalación y uso de la API
+$100.000
+- Total estimado del proyecto
+$1.300.000 CLP
+
+
+Observaciones:
+
+- El presupuesto puede variar según ajustes en los requerimientos o ampliaciones del alcance.
+- No incluye costos de hosting, dominios ni soporte posterior a la entrega.
+- Se ofrece garantía técnica de 30 días posteriores a la implementación, exclusivamente para corrección de errores.
+
 
 *11. Propuesta formal y cronograma de trabajo*
 
