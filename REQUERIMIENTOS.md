@@ -103,7 +103,15 @@ Prioridad baja:
 - Si los productos del negocio son más de lo que se tiene previsto el sistema puede ralentizarse.
 - En caso de intentar usar el sistema en otro sistema operativo que no sea Windows no podrá ejecutarse.
 
-*1. Problema del negocio*
+### *1. Problema del negocio*
+
+Definición del problema
+
+Actualmente, MiniMarkTech enfrenta una falta de centralización en el manejo de su información, ya que los datos relacionados con productos, inventarios y compras se almacenan de manera dispersa en formatos físicos (papel) y archivos digitales independientes (principalmente hojas de cálculo Excel).
+
+Esta práctica provoca pérdidas y duplicación de información, además de dificultar el acceso rápido y confiable a los datos. Como consecuencia, el negocio experimenta errores en el control de stock, dificultades para registrar ventas y retrasos en la toma de decisiones administrativas.
+
+Por esta razón, el cliente requiere el desarrollo de una API con base de datos integrada que permita centralizar, almacenar y gestionar la información de forma segura y eficiente, garantizando la disponibilidad, integridad y trazabilidad de los datos de MiniMarkTech.
 
 ### *2. Usuarios*
 
@@ -307,7 +315,6 @@ Observaciones:
 - El presupuesto puede variar según ajustes en los requerimientos o ampliaciones del alcance.
 - No incluye costos de hosting, dominios ni soporte posterior a la entrega.
 - Se ofrece garantía técnica de 30 días posteriores a la implementación, exclusivamente para corrección de errores.
-
 
 *11. Propuesta formal y cronograma de trabajo*
 
