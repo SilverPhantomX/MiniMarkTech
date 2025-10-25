@@ -356,9 +356,15 @@ Una vez entregado el sistema, se proporcionará un período de soporte técnico 
     1. Errores criticos que afecten a la funcionalidad completa o parcial del software se solucionarán en un plazo máximo de 24 horas.
     2. Errores menores o mejoras solicitadas por el clientes se aplicarán en un rango de 24 horas a 72 horas como plazo máximo.
 
-### *14. Requisitos Futuros*
+### *14. Próximos pasos*
 
-Como principal requisito aumentar la capacidad del sistema para gestionar mayor cantidad productos y perfiles permitiendo escalar proporcionalmente junto al negocio.
+    - Revisar y aprobar el alcance técnico y funcional del proyecto.  
+    - Agendar reunión con el equipo para validar requerimientos y definir entregables.  
+    - Preparar los **datos de prueba y el entorno de desarrollo para iniciar la implementación de la API.  
+    - Asignar responsables y establecer el cronograma de desarrollo y pruebas.  
+    - Iniciar el desarrollo del backend (Express.js + MongoDB) conforme al plan acordado.  
+    - Ejecutar validaciones y pruebas finales para garantizar el cumplimiento de los criterios de aceptación.  
+    - Elaborar la documentación técnica y preparar la entrega final del proyecto.
 
 
 
